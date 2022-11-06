@@ -16,11 +16,17 @@ function Projects() {
             console.log(profileResp)
         }
         loadProfile()
-    }, []);
+    },);
 
 
     return (
-        <div></div>
+        <div>
+            <div className="avatar">
+                <div className="w-24 rounded">
+                    <img src={profile?.avatar_url} alt={`Profile picture of ${profile?.login}`}/>
+                </div>
+            </div>
+        </div>
     );
 }
 
