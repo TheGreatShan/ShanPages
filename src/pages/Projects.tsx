@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {getGithubUser} from "../lib/api";
 import {Simulate} from "react-dom/test-utils";
-import load = Simulate.load;
 import {GithubUser} from "../types/Github";
 
 function Projects() {
