@@ -9,7 +9,7 @@ module.exports = {
         styled: true,
         themes: [
             {
-                mytheme: {
+                main: {
 
                     "primary": "#bbf7d0",
                     "secondary": "#4d7c0f",

@@ -1,10 +1,20 @@
 import {useState} from 'react'
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+
 
 function App() {
-    return (
-        <h1 className="text-3xl font-bold underline text-red-500">
-            Hello world!
-        </h1>
+    return (<Router>
+            <div className="dark:bg-slate-800" id="root">
+                <Routes>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/projects" element={<Projects />}></Route>
+                </Routes>
+            </div>
+        </Router>
+
     )
 }
 
