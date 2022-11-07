@@ -20,13 +20,16 @@ function Projects() {
 
 
     return (
-        <div>
-            <Header title="Github" />
-            <div className="avatar">
-                <div className="w-24 rounded">
-                    <img src={profile?.avatar_url} alt={`Profile picture of ${profile?.login}`}/>
+        <div className="bg-base-100">
+            <Header title="Github"/>
+            <div className="grid">
+                <div className="avatar grid grid-cols-11">
+                    <div className="w-24 rounded col-start-6">
+                        <img className="content-center" src={profile?.avatar_url} alt={`Profile picture of ${profile?.login}`}/>
+                    </div>
                 </div>
             </div>
+
         </div>
     );
 }
