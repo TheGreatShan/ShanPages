@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {getGithubUser} from "../lib/api";
 import {Simulate} from "react-dom/test-utils";
 import {GithubUser} from "../types/Github";
+import Header from "../components/Header";
 
 function Projects() {
     document.title = "Projects - Muras"
@@ -20,6 +21,7 @@ function Projects() {
 
     return (
         <div>
+            <Header title="Github" />
             <div className="avatar">
                 <div className="w-24 rounded">
                     <img src={profile?.avatar_url} alt={`Profile picture of ${profile?.login}`}/>
