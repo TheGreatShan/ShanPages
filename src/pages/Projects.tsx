@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {getGithubUser} from "../lib/api";
-import {Simulate} from "react-dom/test-utils";
 import {GithubUser} from "../types/Github";
 import Header from "../components/Header";
+import {Link} from "react-router-dom";
 
 function Projects() {
     document.title = "Projects - Muras"
@@ -23,9 +23,14 @@ function Projects() {
         <div className="bg-base-100">
             <Header title="Github"/>
             <div className="grid">
-                <div className="avatar grid grid-cols-11">
-                    <div className="w-24 rounded col-start-6">
-                        <img className="content-center" src={profile?.avatar_url} alt={`Profile picture of ${profile?.login}`}/>
+                <div className="avatar grid md:grid-cols-11 grid-cols-3">
+                    <div
+                        className="md:transform md:transition md:duration-500 md:hover:scale-125 w-full rounded md:col-start-6 col-start-2 cursor-pointer">
+                        <a href={profile?.html_url}>
+
+                            <img className="content-center" src={profile?.avatar_url}
+                                 alt={`Profile picture of ${profile?.login}`}/>
+                        </a>
                     </div>
                 </div>
             </div>
