@@ -1,12 +1,21 @@
 import React, {useEffect, useState} from 'react';
-import {getGithubUser} from "../lib/api";
-import {GithubUser} from "../types/Github";
+import {getGithubRepositories, getGithubUser} from "../lib/api";
+import {GithubUser} from "../types/Github/GithubUserType";
 import Header from "../components/Header";
 import {Link} from "react-router-dom";
 import Profile from "../components/Profile";
+import {GithubRepository} from "../types/Github/GithubRepositoryType";
 
 function Projects() {
     document.title = "Projects - Muras"
+
+    useEffect(() => {
+        const loadRepositories = async () => {
+            const repositoryResp: GithubRepository = await getGithubRepositories("shan15dev")
+            console.log(repositoryResp)
+        }
+        loadRepositories()
+    });
 
 
     return (

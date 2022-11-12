@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {GithubUser} from "../types/Github";
+import {GithubUser} from "../types/Github/GithubUserType";
 import {getGithubUser} from "../lib/api";
 
 type ProfileProp = {
