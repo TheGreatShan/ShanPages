@@ -15,7 +15,7 @@ function Profile({profileName}: ProfileProp) {
             setProfile(profileResp)
         }
         loadProfile()
-    },);
+    },[profileName]);
 
 
     return (
