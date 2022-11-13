@@ -12,7 +12,7 @@ export async function getGithubUser(username: string): Promise<GithubUser> {
     });
 }
 
-export async function getGithubRepositories(username: string): Promise<GithubRepository> {
+export async function getGithubRepositories(username: string): Promise<GithubRepository[]> {
     return await fetch(`${githubUserLink}/${username}/repos`).then(resp => {
         return resp.json();
     }).catch(error => {
