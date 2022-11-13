@@ -18,7 +18,7 @@ function Repositories({profileName}: RepositoriesProps) {
     }, [profileName]);
 
     return (
-        <div className="grid md:grid-cols-3 gap-y-5 place-items-center mt-5">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 place-items-center mt-5">
             {
                 repositories?.map(repo => (
                     <div
