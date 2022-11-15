@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {getGithubRepositories, getGithubUser} from "../lib/api";
+import {getGithubRepositories, getGithubUser} from "../lib/api/GithubAPI";
 import {GithubUser} from "../types/Github/GithubUserType";
 import Header from "../components/Header";
 import {Link} from "react-router-dom";
