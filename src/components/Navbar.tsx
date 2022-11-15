@@ -14,9 +14,9 @@ function Navbar() {
                     </label>
                     <ul tabIndex={0}
                         className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="/" >Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/projects">Projects</a></li>
-                        <li><a>About</a></li>
+                        <li><a href="/about">About</a></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">Muras</a>
@@ -25,7 +25,7 @@ function Navbar() {
                 <ul className="menu menu-horizontal p-0">
                     <li><a href="/">Home</a></li>
                     <li><a href="/projects">Projects</a></li>
-                    <li><a>About</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </div>
             <div className="navbar-end">
