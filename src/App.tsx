@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 
 function App() {
     return (<Router>
-            <div className="dark:bg-slate-800" id="root">
+            <div className="bg-base-100" id="root">
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/projects" element={<Projects />}></Route>
