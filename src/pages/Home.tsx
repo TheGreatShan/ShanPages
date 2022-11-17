@@ -5,7 +5,7 @@ import Profile from "../components/Profile";
 
 function Home() {
     document.title = "Home - Muras"
-
+    
     const [infoCardList, setInfoCardList] = useState<InfoCardsProps[]>([{
         title: "Projects",
         link: "/projects"
