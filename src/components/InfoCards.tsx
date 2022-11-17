@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
-import { InfoCardsProps } from '../types/Custom/InfoCardType';
+import {InfoCardsProps} from '../types/Custom/InfoCardType';
 
+type Property = {
+    infoCardProps: InfoCardsProps[]
+}
 
-
-function InfoCards(infoCardProps : InfoCardsProps[]) {
+function InfoCards({infoCardProps}: Property) {
     const [infoProps, setInfoProps] = useState<InfoCardsProps[]>(infoCardProps)
     return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 place-items-center mt-5">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 place-items-center mt-5 bg-base-100">
             {
                 infoProps.map(info => (
                     <div
