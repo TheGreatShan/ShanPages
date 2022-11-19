@@ -17,6 +17,7 @@ function InfoCards({infoCardProps}: Property) {
                         <a href={info.link}>
                             <div className="card-body">
                                 <h2 className="card-title">{info.title}</h2>
+                                <p>{info.description ? info.description : ""}</p>
                             </div>
                         </a>
                     </div>
