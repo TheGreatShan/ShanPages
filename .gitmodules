@@ -1,0 +1,3 @@
+[submodule "shanpages"]
+	path = shanpages
+	url = ./
