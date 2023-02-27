@@ -6,7 +6,7 @@ import Repositories from "../components/Repositories";
 function Projects() {
     document.title = "Projects - Muras"
 
-    const [profileName, setProfileName] = useState("shan15dev");
+    const [profileName, setProfileName] = useState("shan15");
 
     return (
         <div className="bg-base-100">
