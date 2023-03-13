@@ -17,7 +17,7 @@ function Home() {
 
     return (
         <div className="bg-base-100">
-            <Profile profileName="shan15dev"/>
+            <Profile profileName="shan15"/>
             <InfoCards infoCardProps={infoCardList}/>
         </div>
     );
