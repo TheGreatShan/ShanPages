@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {InfoCardsProps} from '../types/Custom/InfoCardType';
+import {Link} from "react-router-dom";
 
 type Property = {
     infoCardProps: InfoCardsProps[]
@@ -14,12 +15,12 @@ function InfoCards({infoCardProps}: Property) {
                     <div
                         className="card w-96 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-125"
                         key={info.title}>
-                        <a href={info.link}>
+                        <Link to={info.link}>
                             <div className="card-body">
                                 <h2 className="card-title">{info.title}</h2>
                                 <p>{info.description ? info.description : ""}</p>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 ))
             }

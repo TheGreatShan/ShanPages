@@ -8,7 +8,7 @@ import NotFound from './pages/NotFound';
 
 
 function App() {
-    return (<Router>
+    return (
             <div className="bg-base-100" id="root">
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
@@ -17,8 +17,6 @@ function App() {
                     <Route path="*" element={<NotFound/>}></Route>
                 </Routes>
             </div>
-        </Router>
-
     )
 }
 
