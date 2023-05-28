@@ -1,5 +1,5 @@
-import firebase from "firebase/app";
-import fireDB from "firebase/compat";
+import {initializeApp} from "firebase/app";
+import {getFirestore} from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -12,7 +12,7 @@ const firebaseConfig = {
     appId: import.meta.env.VITE_APP_ID
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = fireDB.firestore()
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp)
 
 export default db
