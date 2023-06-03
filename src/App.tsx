@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import NotFound from './pages/NotFound';
+import Timetable from "./pages/Timetable";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/projects" element={<Projects />}></Route>
                     <Route path="/about" element={<About />}></Route>
+                    <Route path="/timetable" element={<Timetable />}></Route>
                     <Route path="*" element={<NotFound/>}></Route>
                 </Routes>
             </div>

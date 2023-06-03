@@ -9,10 +9,10 @@ function Home() {
     const [infoCardList, setInfoCardList] = useState<InfoCardsProps[]>([{
         title: "Projects", link: "/projects",
         description: "A view of all project by Shan15Dev"
-    }, {title: " About", link: "/about", description: "Some Facts about me (Not working)"}, {
+    }, {title: " About", link: "/about", description: "Some Facts about me"}, {
         title: "TimeTable",
         link: "/timetable",
-        description: "TimeTable for my School (Not working)"
+        description: "TimeTable for my School"
     }])
 
     return (
