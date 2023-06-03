@@ -1,15 +1,30 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {InfoCardsProps} from '../types/Custom/InfoCardType';
 import {Link} from "react-router-dom";
 import {Subject} from "../types/Custom/SubjectType";
+import {getTimeTable} from "../lib/api";
 
 type Property = {
-    subjects: Subject[]
+    day: string
 }
+const defaultModel: Subject[] = [{
+    subject: "",
+    room: "",
+    start: {seconds: 0, nanoseconds: 0},
+    end: {seconds: 0, nanoseconds: 0},
 
-function InfoCards({subjects}: Property) {
-    const [infoProps, setInfoProps] = useState<Subject[]>(subjects)
+}]
 
+function InfoCards({day}: Property) {
+    const [infoProps, setInfoProps] = useState<Subject[]>(defaultModel)
+    useEffect(() => {
+        const fetchTimeTable = async () => {
+            const timeTable = await getTimeTable(day);
+            setInfoProps(timeTable)
+        }
+        fetchTimeTable()
+    }, [])
+    console.log(infoProps)
     return (
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 place-items-center mt-5 bg-base-100">
             {
@@ -17,11 +32,11 @@ function InfoCards({subjects}: Property) {
                     <div
                         className="card w-96 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-125"
                         key={info.subject}>
-                            <div className="card-body">
-                                <h2 className="card-title">{info.subject}</h2>
-                                <p>{info.start.seconds}</p>
-                                <p>{info.end.seconds}</p>
-                            </div>
+                        <div className="card-body">
+                            <h2 className="card-title">{info.subject}</h2>
+                            <p>{info.start.seconds}</p>
+                            <p>{info.end.seconds}</p>
+                        </div>
                     </div>
                 ))
             }

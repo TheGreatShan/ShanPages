@@ -13,7 +13,7 @@ const firebaseConfig = {
     appId: import.meta.env.VITE_APP_ID
 };
 
-const firebeasApp = initializeApp(firebaseConfig);
-const db = firebase.firestore()
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app)
 
 export default db

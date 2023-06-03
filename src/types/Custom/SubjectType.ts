@@ -3,9 +3,15 @@ import Timestamp = firebase.firestore.Timestamp;
 
 type Subject = {
     subject: string;
-    room: number;
-    start: Timestamp;
-    end: Timestamp;
+    room: string;
+    start: {
+        seconds: number;
+        nanoseconds: number;
+    };
+    end: {
+        seconds: number;
+        nanoseconds: number;
+    };
 }
 
 export type {Subject}
