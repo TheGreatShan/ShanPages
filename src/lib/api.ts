@@ -44,6 +44,5 @@ export async function getDocumentNames(collectionName: string): Promise<string[]
     querySnapshot.forEach((element: DocumentData) => {
         subjects.push(element.id)
     })
-    console.log(subjects)
     return subjects
 }
