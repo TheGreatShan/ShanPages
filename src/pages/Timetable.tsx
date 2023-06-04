@@ -7,12 +7,13 @@ import {getDocumentNames, getTimeTable} from "../lib/api";
 
 function Timetable() {
 
-    useEffect(() => {
+    document.title = "Timetable - Muras"
+/*    useEffect(() => {
       const lal =  async () => {
             await getDocumentNames("timetable")
         }
         lal()
-    }, [])
+    }, []) */
     return (
         <div>
             <TimeTableCard day={"thursday"}/>
