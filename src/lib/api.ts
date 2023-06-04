@@ -1,8 +1,10 @@
 import {GithubUser} from "../types/Github/GithubUserType";
 import {GithubRepository} from "../types/Github/GithubRepositoryType";
 import {Subject} from "../types/Custom/SubjectType";
-import {doc, getDoc} from "firebase/firestore";
+import {doc, getDocs, getDoc, collection} from "firebase/firestore";
 import db from "./FirebaseConfig";
+import firebase from "firebase/compat";
+import DocumentData = firebase.firestore.DocumentData;
 
 const githubLink: string = "https://api.github.com"
 const githubUserLink: string = `${githubLink}/users`
@@ -32,5 +34,15 @@ export async function getTimeTable(day: string): Promise<Subject[]> {
         subjects.push({subject: element.subject, room: element.room, start: element.start, end: element.end})
     }) : Promise.reject("No data found")
 
+    return subjects
+}
+
+export async function getDocumentNames(collectionName: string): Promise<string[]> {
+    const querySnapshot = await getDocs(collection(db, collectionName));
+
+    let subjects: string[] = []
+    querySnapshot.forEach((element: DocumentData) => {
+        subjects.push(element.id)
+    })
     return subjects
 }

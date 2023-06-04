@@ -6,30 +6,15 @@ import {getTimeTable} from "../lib/api";
 import {it} from "node:test";
 
 type Property = {
-    day: string
+    day: Subject[]
 }
-const defaultModel: Subject[] = [{
-    subject: "",
-    room: "",
-    start: {seconds: 0, nanoseconds: 0},
-    end: {seconds: 0, nanoseconds: 0},
-
-}]
 
 function InfoCards({day}: Property) {
-    const [infoProps, setInfoProps] = useState<Subject[]>(defaultModel)
-    useEffect(() => {
-        const fetchTimeTable = async () => {
-            const timeTable = await getTimeTable(day);
-            setInfoProps(timeTable)
-        }
-        fetchTimeTable()
-    }, [])
-    console.log(infoProps)
+
     return (
         <div className="grid gap-5 place-items-center mt-5 bg-base-100">
             {
-                infoProps.map(info => (
+                day.map(info => (
                     <div
                         className="card card-compact w-96 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-105"
                         key={info.subject}>
