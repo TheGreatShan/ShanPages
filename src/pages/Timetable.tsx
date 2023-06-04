@@ -40,7 +40,7 @@ function Timetable() {
                         className={"border-0 cursor-pointer rounded-full drop-shadow-md bg-primary text-black w-96 h-7 px-5 duration-300"}>
                     {
                         documents?.map(day => (
-                            <option key={day} value={day}>{day}</option>
+                            <option key={day} value={day}>{day.toUpperCase()}</option>
                         ))
                     }
                 </select>
