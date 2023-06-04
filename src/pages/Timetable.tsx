@@ -3,11 +3,16 @@ import db from "../lib/FirebaseConfig";
 import {Subject} from "../types/Custom/SubjectType";
 import TimeTableCard from "../components/TimeTableCard";
 import {doc, getDoc} from "firebase/firestore"
-import {getTimeTable} from "../lib/api";
+import {getDocumentNames, getTimeTable} from "../lib/api";
 
 function Timetable() {
-    const [timeTable, setTimeTable] = useState<Subject[]>([]);
 
+    useEffect(() => {
+      const lal =  async () => {
+            await getDocumentNames("timetable")
+        }
+        lal()
+    }, [])
     return (
         <div>
             <TimeTableCard day={"thursday"}/>

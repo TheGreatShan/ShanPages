@@ -25,7 +25,6 @@ function InfoCards({day}: Property) {
         }
         fetchTimeTable()
     }, [])
-    console.log(infoProps)
     return (
         <div className="grid gap-5 place-items-center mt-5 bg-base-100">
             {

@@ -34,3 +34,9 @@ export async function getTimeTable(day: string): Promise<Subject[]> {
 
     return subjects
 }
+
+export async function getDocumentNames(collection: string): Promise<string> {
+    const docref = doc(db, collection)
+
+    return docref.id
+}
