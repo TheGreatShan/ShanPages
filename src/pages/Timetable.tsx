@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
-import db from "../lib/FirebaseConfig";
 import {Subject} from "../types/Custom/SubjectType";
 import TimeTableCard from "../components/TimeTableCard";
-import {doc, getDoc} from "firebase/firestore";
 import {getDocumentNames, getTimeTable} from "../lib/api";
 
 const defaultModel: Subject[] = [{
@@ -37,13 +35,16 @@ function Timetable() {
 
     return (
         <div>
-            <select onChange={e => setDay(e.target.value)}>
-                {
-                    documents?.map(day => (
-                        <option key={day} value={day}>{day}</option>
-                    ))
-                }
-            </select>
+            <div className={"grid gap-5 place-items-center mt-5 bg-base-100"}>
+                <select onChange={e => setDay(e.target.value)}
+                        className={"border-0 cursor-pointer rounded-full drop-shadow-md bg-primary text-black w-96 h-7 px-5 duration-300"}>
+                    {
+                        documents?.map(day => (
+                            <option key={day} value={day}>{day}</option>
+                        ))
+                    }
+                </select>
+            </div>
             <TimeTableCard day={infoProps}/>
         </div>
     );
