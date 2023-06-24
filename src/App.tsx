@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import NotFound from './pages/NotFound';
 import Timetable from "./pages/Timetable";
+import Footer from "./components/Footer";
 
 
 function App() {
