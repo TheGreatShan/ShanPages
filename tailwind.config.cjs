@@ -11,15 +11,16 @@ module.exports = {
             {
                 main: {
 
-                    "primary": "#bbf7d0",
-                    "secondary": "#4d7c0f",
-                    "accent": "#3f6212",
-                    "neutral": "#67e8f9",
-                    "base-100": "#111827",
-                    "info": "#3ABFF8",
-                    "success": "#36D399",
-                    "warning": "#FBBD23",
-                    "error": "#F87272",
+
+                    "primary": "#a78bfa",
+                    "secondary": "#d8b4fe",
+                    "accent": "#1fb2a6",
+                    "neutral": "#2a323c",
+                    "base-100": "#1d232a",
+                    "info": "#3abff8",
+                    "success": "#36d399",
+                    "warning": "#fbbd23",
+                    "error": "#f87272",
                 },
             },
         ],
