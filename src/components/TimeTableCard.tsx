@@ -20,7 +20,7 @@ function InfoCards({day}: Property) {
                         key={info.subject}>
                         <div className="card-body">
                             <h2 className="card-title">{info.subject}</h2>
-                            <div className="grid grid-cols-3">
+                            <div className="grid grid-cols-2 md:grid-cols-3">
                                 <p><span
                                     className="font-bold">Start: </span>{nanosecondsToDate(info.start.seconds * 1000000000 + info.start.nanoseconds).toLocaleTimeString([], {
                                     hour: "2-digit",

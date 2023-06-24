@@ -7,7 +7,7 @@ function About() {
         <>
             <Header title="About"/>
             <div className={"flex flex-col items-center w-full"}>
-                <p className={"w-3/4 "}>Hi, I'm a software developer with a passion for creating web
+                <p className={"w-3/4 text-slate-100 text-xl"}>Hi, I'm a software developer with a passion for creating web
                     applications using React and C#. I started
                     my journey in 2021, when I decided to pursue my dream of becoming a programmer. Since then, I have
                     learned a lot from online courses, books, and projects. I enjoy solving problems, learning new
