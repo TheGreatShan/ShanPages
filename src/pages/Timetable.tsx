@@ -13,14 +13,14 @@ const defaultModel: Subject[] = [{
 
 function Timetable() {
     const [documents, setDocuments] = useState<string[]>([]);
-    const [day, setDay] = useState<string>("friday");
+    const [day, setDay] = useState<string>("thursday");
     const [infoProps, setInfoProps] = useState<Subject[]>(defaultModel);
 
     document.title = "Timetable - Muras";
     useEffect(() => {
         const loadDocs = async () => {
             const documents = await getDocumentNames("timetable");
-            setDocuments(documents);
+            setDocuments(documents.reverse());
         };
         loadDocs();
     }, []);
