@@ -13,7 +13,7 @@ function InfoCards({infoCardProps}: Property) {
             {
                 infoProps.map(info => (
                     <div
-                        className="card w-96 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-125"
+                        className="card w-96 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-105"
                         key={info.title}>
                         <Link to={info.link}>
                             <div className="card-body">

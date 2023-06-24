@@ -22,7 +22,7 @@ function Profile({profileName}: ProfileProp) {
         <div className="grid">
             <div className="avatar grid md:grid-cols-11 grid-cols-3">
                 <div
-                    className="md:transform md:transition md:duration-500 md:hover:scale-125 w-full rounded md:col-start-6 col-start-2 cursor-pointer">
+                    className="md:transform md:transition md:duration-500 md:hover:scale-105 w-full rounded md:col-start-6 col-start-2 cursor-pointer">
                     <a href={profile?.html_url}>
 
                         <img className="content-center" src={profile?.avatar_url}
