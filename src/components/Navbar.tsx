@@ -18,6 +18,7 @@ function Navbar() {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/projects">Projects</Link></li>
                         <li><Link to="/about">About</Link></li>
+                        <li><Link to="/timetable">TimeTable</Link></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">Muras</a>
@@ -27,6 +28,7 @@ function Navbar() {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to="/about">About</Link></li>
+                    <li><Link to="/timetable">Timetable</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">

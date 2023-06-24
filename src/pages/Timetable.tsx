@@ -13,14 +13,14 @@ const defaultModel: Subject[] = [{
 
 function Timetable() {
     const [documents, setDocuments] = useState<string[]>([]);
-    const [day, setDay] = useState<string>("friday");
+    const [day, setDay] = useState<string>("thursday");
     const [infoProps, setInfoProps] = useState<Subject[]>(defaultModel);
 
     document.title = "Timetable - Muras";
     useEffect(() => {
         const loadDocs = async () => {
             const documents = await getDocumentNames("timetable");
-            setDocuments(documents);
+            setDocuments(documents.reverse());
         };
         loadDocs();
     }, []);
@@ -37,7 +37,7 @@ function Timetable() {
         <div>
             <div className={"grid gap-5 place-items-center mt-5 bg-base-100"}>
                 <select onChange={e => setDay(e.target.value)}
-                        className={"border-0 cursor-pointer rounded-full drop-shadow-md bg-primary text-black w-96 h-7 px-5 duration-300"}>
+                        className={"select select-primary w-full max-w-xs"}>
                     {
                         documents?.map(day => (
                             <option key={day} value={day}>{day.toUpperCase()}</option>
