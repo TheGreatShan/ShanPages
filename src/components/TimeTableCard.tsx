@@ -21,8 +21,16 @@ function InfoCards({day}: Property) {
                         <div className="card-body">
                             <h2 className="card-title">{info.subject}</h2>
                             <div className="grid grid-cols-2">
-                                <p><span className="font-bold">Start: </span>{nanosecondsToDate(info.start.seconds * 1000000000 + info.start.nanoseconds).toLocaleTimeString()}</p>
-                                <p><span className="font-bold">End: </span>{nanosecondsToDate(info.end.seconds * 1000000000 + info.end.nanoseconds).toLocaleTimeString()}</p>
+                                <p><span
+                                    className="font-bold">Start: </span>{nanosecondsToDate(info.start.seconds * 1000000000 + info.start.nanoseconds).toLocaleTimeString([], {
+                                    hour: "2-digit",
+                                    minute: "2-digit"
+                                })}</p>
+                                <p><span
+                                    className="font-bold">End: </span>{nanosecondsToDate(info.end.seconds * 1000000000 + info.end.nanoseconds).toLocaleTimeString([], {
+                                    hour: "2-digit",
+                                    minute: "2-digit"
+                                })}</p>
                                 <p><span className="font-bold">Place: </span>{info.room}</p>
                             </div>
                         </div>
