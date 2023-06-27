@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@firebase/app": "^0.9.13",
+    "@firebase/firestore": "^3.13.0",
     "daisyui": "^2.38.0",
     "dotenv": "^16.0.3",
-    "firebase": "^9.22.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3"
