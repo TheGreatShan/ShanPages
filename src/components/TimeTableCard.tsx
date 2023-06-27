@@ -16,21 +16,23 @@ function InfoCards({day}: Property) {
             {
                 day.map(info => (
                     <div
-                        className="card card-compact bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-105 card-body"
+                        className="card card-compact w-1/4 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-105"
                         key={info.subject}>
-                        <h2 className="card-title">{info.subject}</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-3">
-                            <p><span
-                                className="font-bold">Start: </span>{nanosecondsToDate(info.start.seconds * 1000000000 + info.start.nanoseconds).toLocaleTimeString([], {
-                                hour: "2-digit",
-                                minute: "2-digit"
-                            })}</p>
-                            <p><span
-                                className="font-bold">End: </span>{nanosecondsToDate(info.end.seconds * 1000000000 + info.end.nanoseconds).toLocaleTimeString([], {
-                                hour: "2-digit",
-                                minute: "2-digit"
-                            })}</p>
-                            <p><span className="font-bold">Place: </span>{info.room}</p>
+                        <div className="card-body">
+                            <h2 className="card-title">{info.subject}</h2>
+                            <div className="grid grid-cols-2 md:grid-cols-3">
+                                <p><span
+                                    className="font-bold">Start: </span>{nanosecondsToDate(info.start.seconds * 1000000000 + info.start.nanoseconds).toLocaleTimeString([], {
+                                    hour: "2-digit",
+                                    minute: "2-digit"
+                                })}</p>
+                                <p><span
+                                    className="font-bold">End: </span>{nanosecondsToDate(info.end.seconds * 1000000000 + info.end.nanoseconds).toLocaleTimeString([], {
+                                    hour: "2-digit",
+                                    minute: "2-digit"
+                                })}</p>
+                                <p><span className="font-bold">Place: </span>{info.room}</p>
+                            </div>
                         </div>
                     </div>
                 ))
