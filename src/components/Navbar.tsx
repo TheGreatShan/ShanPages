@@ -21,7 +21,7 @@ function Navbar() {
                         <li><Link to="/timetable">TimeTable</Link></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Muras</a>
+                <Link to="/" className="btn btn-ghost normal-case text-xl">Muras</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
