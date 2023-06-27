@@ -16,7 +16,7 @@ function InfoCards({day}: Property) {
             {
                 day.map(info => (
                     <div
-                        className="card card-compact w-1/4 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-105"
+                        className="card cursor-default card-compact w-1/4 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-105"
                         key={info.subject}>
                         <div className="card-body">
                             <h2 className="card-title">{info.subject}</h2>
