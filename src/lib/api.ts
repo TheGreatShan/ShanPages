@@ -1,10 +1,8 @@
 import {GithubUser} from "../types/Github/GithubUserType";
 import {GithubRepository} from "../types/Github/GithubRepositoryType";
 import {Subject} from "../types/Custom/SubjectType";
-import {doc, getDocs, getDoc, collection} from "firebase/firestore";
+import {doc, getDocs, getDoc, collection, DocumentData} from "@firebase/firestore";
 import db from "./FirebaseConfig";
-import firebase from "firebase/compat";
-import DocumentData = firebase.firestore.DocumentData;
 
 const githubLink: string = "https://api.github.com"
 const githubUserLink: string = `${githubLink}/users`
