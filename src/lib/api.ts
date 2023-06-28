@@ -3,6 +3,7 @@ import {GithubRepository} from "../types/Github/GithubRepositoryType";
 import {Subject} from "../types/Custom/SubjectType";
 import {doc, getDocs, getDoc, collection, DocumentData} from "@firebase/firestore";
 import db from "./FirebaseConfig";
+import {Progress} from "../types/Custom/ProgressType";
 
 const githubLink: string = "https://api.github.com"
 const githubUserLink: string = `${githubLink}/users`
@@ -33,6 +34,18 @@ export async function getTimeTable(day: string): Promise<Subject[]> {
     }) : Promise.reject("No data found")
 
     return subjects
+}
+
+export async function getProgress(): Promise<Progress[]> {
+    const docRef = doc(db, "progress", "progress");
+    const docSnap = await getDoc(docRef);
+    let progress: Progress[] = []
+
+    docSnap.exists() ? docSnap.data()["progress"].forEach((element: Progress) => {
+        progress.push({skill: element.skill, value: element.value})
+    }) : Promise.reject("No data found")
+
+    return progress
 }
 
 export async function getDocumentNames(collectionName: string): Promise<string[]> {
