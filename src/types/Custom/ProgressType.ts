@@ -1,4 +1,5 @@
 export type Progress = {
-    skill: string;
-    value: number;
+  picture: string;
+  skill: string;
+  value: number;
 }
