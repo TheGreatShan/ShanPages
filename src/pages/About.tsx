@@ -32,7 +32,7 @@ function About() {
           my
           work and skills. Feel free to contact me if you want to know more about me or my projects.</p>
         <Header title="Skills" />
-        <div className="grid grid-cols-5 gap-4 w-3/4 mt-4">
+        <div className="grid md:grid-cols-5 gap-4 md:w-3/4 mt-4">
           {
             progressList.map(progress => {
               return <SkillProgress progress={progress} key={progress.skill} />
