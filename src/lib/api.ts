@@ -42,7 +42,7 @@ export async function getProgress(): Promise<Progress[]> {
   let progress: Progress[] = []
 
   docSnap.exists() ? docSnap.data()["progress"].forEach((element: Progress) => {
-    progress.push({ skill: element.skill, value: element.value, picture: element.picture })
+    progress.push({ skill: element.skill, value: element.value, picture: element.picture, link: element.link })
   }) : Promise.reject("No data found")
 
   return progress
