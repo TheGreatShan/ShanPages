@@ -6,7 +6,7 @@ type Props = {
 
 function SkillProgress({ progress }: Props) {
   return (
-    <div className="w-1/5 bg-primary card card-body card-compact">
+    <div className="w-full bg-primary card card-body card-compact md:transform md:transition md:duration-500 md:hover:scale-105">
       <h2 className="card-title text-black">{progress.skill}</h2>
       <progress className="progress w-full" value={progress.value} max="100"></progress>
     </div>
