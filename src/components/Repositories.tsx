@@ -23,13 +23,11 @@ function Repositories({profileName}: RepositoriesProps) {
                 repositories?.map(repo => (
                     <div
                         className="card w-96 bg-primary text-primary-content cursor-pointer md:transform md:transition md:duration-500 md:hover:scale-105"
-                        key={repo.id}>
-                        <a href={repo.html_url}>
+                        key={repo.id} onClick={() => window.open(repo.html_url, "_blank")}>
                             <div className="card-body">
                                 <h2 className="card-title">{repo.name}</h2>
                                 <p>{repo.description ? repo.description : "No description"}</p>
                             </div>
-                        </a>
                     </div>
                 ))
             }
